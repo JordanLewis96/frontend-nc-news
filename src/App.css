@@ -1,3 +1,53 @@
 .App {
   text-align: center;
+  background-color: rgb(221, 241, 244);
+  padding: 5%;
+}
+.articleTitle {
+  text-align: center;
+  border: 2.5px solid black;
+}
+
+.articleTopic {
+  text-align: center;
+  border: 2.5px solid black;
+}
+
+.articleAuthor {
+  text-align: center;
+  border: 2.5px solid black;
+}
+
+.articleBody {
+  text-align: center;
+  border: 2.5px solid black;
+}
+
+.articleDate {
+  text-align: center;
+  border: 2.5px solid black;
+}
+
+.articleVotes {
+  text-align: center;
+  border: 2.5px solid black;
+}
+
+.articleCommentCount {
+  text-align: center;
+  border: 2.5px solid black;
+}
+
+.list {
+  padding-left: 0;
+}
+
+.listItem {
+  font-size: large;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  padding: 20px;
+  margin: 20px auto;
+  border: 5px solid purple;
+  width: auto;
+  list-style: none;
 }
