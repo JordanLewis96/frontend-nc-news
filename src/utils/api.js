@@ -7,6 +7,7 @@ export const getTopics = () => {
       return data;
     });
 };
+
 export const getArticles = (topic) => {
   return axios
     .get(`https://backend-nc-news-jl.herokuapp.com/api/articles`, {
