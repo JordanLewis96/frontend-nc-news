@@ -3,39 +3,81 @@
   background-color: rgb(221, 241, 244);
   padding: 5%;
 }
-.articleTitle {
-  text-align: center;
-  border: 2.5px solid black;
-}
 
-.articleTopic {
-  text-align: center;
-  border: 2.5px solid black;
-}
-
-.articleAuthor {
-  text-align: center;
-  border: 2.5px solid black;
-}
-
-.articleBody {
-  text-align: center;
-  border: 2.5px solid black;
+.Title {
+  color: #7c795d;
+  font-family: 'Source Sans Pro', sans-serif; 
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .articleDate {
-  text-align: center;
-  border: 2.5px solid black;
+  color: #7c795d; 
+  font-family: 'Source Sans Pro', sans-serif; 
+  font-size: 12px; 
+  font-weight: 400; 
+  text-transform: uppercase;
+  position: relative; left: 0%; top: px;
 }
 
-.articleVotes {
-  text-align: center;
-  border: 2.5px solid black;
+.articleTitle {
+  color: #7c795d; 
+  font-family: 'Trocchi', serif; 
+  font-size:35px; 
+  font-weight: normal; 
+  margin: 0;
+  text-transform: uppercase;
 }
 
-.articleCommentCount {
+.lineBelowTitle {
+  color:#7c795d;
+}
+
+.articleTopic {
+  color: #7c795d; 
+  font-family: 'Source Sans Pro', sans-serif; 
+  font-size: 15px; 
+  font-weight: 400; 
+  margin: 0 0 24px;
+  text-transform: uppercase;
+  position: relative; left: -25%;
+}
+
+.articleAuthor {
+  color: #7c795d; 
+  font-family: 'Source Sans Pro', sans-serif; 
+  font-size: 15px; 
+  font-weight: 400; 
+  margin: 0 0 24px;
+  text-transform: uppercase;
+  position: relative; left: 25%; top: -41.5px;
+}
+
+.articleBody {
+  color: #7c795d; 
+  font-family: 'Source Sans Pro', sans-serif; 
+  font-size: 22.5px; 
+  font-weight: 400; 
+  margin: 0 0 20px;
+  position: relative; top: -40px;
+}
+
+.articleVotes, .articleCommentCount {
+  background-color: purple;
+  font-weight: bolder;
+  color: #7c795d; 
+  padding: 14px 25px;
   text-align: center;
-  border: 2.5px solid black;
+  text-decoration: none;
+}
+
+.cookingButton, .footballButton, .codingButton {
+  background-color: purple;
+  font-weight: bolder;
+  color: #7c795d; 
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
 }
 
 .list {
