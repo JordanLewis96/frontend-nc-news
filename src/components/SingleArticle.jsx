@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { fetchArticleByID } from "../utils/api.js";
+import Votes from "./Votes";
 
 export default function ArticleByID() {
   const [article, setArticle] = useState([]);
@@ -31,7 +32,7 @@ export default function ArticleByID() {
               <p className="articleTopic"> {article.topic}</p>
               <p className="articleAuthor"> Authored by - {article.author}</p>
               <p className="articleBody"> {" "}{article.body}</p>
-              <p className="articleVotes">Votes - {article.votes}</p>
+              <Votes className="articleVotes" article_id={article_id} votes={article.votes}></Votes>
               <p className="articleCommentCount">Comments -{article.comment_count}</p>
             </li>
   )

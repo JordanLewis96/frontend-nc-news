@@ -27,6 +27,8 @@
   font-weight: normal; 
   margin: 0;
   text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: purple;
 }
 
 .lineBelowTitle {
