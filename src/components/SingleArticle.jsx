@@ -1,29 +1,25 @@
 import { useEffect, useState } from "react";
-import { getArticles } from "../utils/api.js";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { fetchArticleByID } from "../utils/api.js";
 
-export default function Articles() {
-  const [articles, setArticles] = useState([]);
-  const { topic } = useParams();
+export default function ArticleByID() {
+  const [article, setArticle] = useState([]);
+  const { article_id } = useParams();
 
   useEffect(() => {
-    getArticles(topic)
-      .then((data) => {
-        setArticles(data.articles);
+    fetchArticleByID(article_id)
+      .then(( singleArticle ) => {
+        setArticle(singleArticle.article);
       })
-      .catch((err) => { 
+      .catch((err) => {
         console.log(err);
       });
-  }, [topic]);
+  }, [article_id]);
 
   return (
-    <>
-      <ul className="list">
-        {articles.map((article) => {
-          return (
-            <li className="listItem" key={article.article_id}>
+    <li className="listItem" key={article.article_id}>
               <p className="articleDate"> Date & Time of publish - {new Date(article.created_at).toLocaleString()}</p>
-              <Link to={`/articles/${article.article_id}`}><p className="articleTitle"> {article.title}</p></Link>
+              <p className="articleTitle"> {article.title}</p>
               <hr className="lineBelowTitle"></hr>
               <p className="articleTopic"> {article.topic}</p>
               <p className="articleAuthor"> Authored by - {article.author}</p>
@@ -31,9 +27,5 @@ export default function Articles() {
               <p className="articleVotes">Votes - {article.votes}</p>
               <p className="articleCommentCount">Comments -{article.comment_count}</p>
             </li>
-          );
-        })}
-      </ul>
-    </>
-  );
+  )
 }
