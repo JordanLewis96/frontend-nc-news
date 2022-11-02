@@ -27,6 +27,8 @@
   font-weight: normal; 
   margin: 0;
   text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: purple;
 }
 
 .lineBelowTitle {
@@ -92,4 +94,23 @@
   border: 5px solid purple;
   width: auto;
   list-style: none;
+}
+
+.voteButtons {
+  background-color: purple;
+  font-weight: bolder;
+  padding: 10px 20px;
+  text-align: center;
+  border-width: 0.01cm;
+  border-color: #7c795d;
+  border-style: double;
+}
+
+.voteMessage {
+  color: #7c795d; 
+  font-family: 'Source Sans Pro', sans-serif; 
+  font-size: 12px; 
+  font-weight: 400; 
+  margin: 0 0 20px;
+  position: relative; top: 15px;
 }

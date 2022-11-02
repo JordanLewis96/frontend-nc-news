@@ -27,3 +27,14 @@ export const fetchArticleByID = (article_id) => {
       return data;
     });
 };
+
+export const patchVotes = (article_id, inc_votes) => {
+  return axios
+    .patch(
+      `https://backend-nc-news-jl.herokuapp.com/api/articles/${article_id}`,
+      { inc_votes: inc_votes }
+    )
+    .then(({ data }) => {
+      return data;
+    });
+};
