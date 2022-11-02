@@ -4,17 +4,24 @@ import { useParams, Link } from "react-router-dom";
 
 export default function Articles() {
   const [articles, setArticles] = useState([]);
+  const [isLoading, setLoading] = useState(true)
   const { topic } = useParams();
 
   useEffect(() => {
     getArticles(topic)
       .then((data) => {
+        setLoading(true)
         setArticles(data.articles);
+        setLoading(false)
       })
       .catch((err) => { 
         console.log(err);
       });
   }, [topic]);
+
+  if (isLoading) {
+    return <p>Loading, One moment please...</p>;
+  }
 
   return (
     <>

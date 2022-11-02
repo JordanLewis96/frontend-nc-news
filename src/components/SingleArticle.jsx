@@ -4,17 +4,24 @@ import { fetchArticleByID } from "../utils/api.js";
 
 export default function ArticleByID() {
   const [article, setArticle] = useState([]);
+  const [isLoading, setLoading] = useState(true);
   const { article_id } = useParams();
 
   useEffect(() => {
     fetchArticleByID(article_id)
       .then(( singleArticle ) => {
+        setLoading(true);
         setArticle(singleArticle.article);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
       });
   }, [article_id]);
+
+  if (isLoading) {
+    return <p>Loading, One moment please...</p>;
+  }
 
   return (
     <li className="listItem" key={article.article_id}>
