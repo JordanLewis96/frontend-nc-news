@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import { Routes, Route } from "react-router-dom";
 
 import Articles from "./components/Articles"
+import ArticleByID from "./components/SingleArticle";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Articles />}/>
           <Route path='/:topic' element={<Articles/>}></Route>
+          <Route path="/articles/:article_id" element={<ArticleByID />}></Route>
         </Routes>
     </div>
   );

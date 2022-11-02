@@ -17,3 +17,13 @@ export const getArticles = (topic) => {
       return data;
     });
 };
+
+export const fetchArticleByID = (article_id) => {
+  return axios
+    .get(`https://backend-nc-news-jl.herokuapp.com/api/articles/${article_id}`, {
+      params: { article_id }, 
+    })
+    .then(({ data }) => {
+      return data;
+    });
+};
