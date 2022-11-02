@@ -20,7 +20,7 @@ export default function Votes({ article_id, votes }) {
 
   return (
     <>
-      <h5>did you enjoy this article?</h5>
+      <h5 className="voteMessage">Did you like this article?</h5>
       <button
         className="voteButtons"
         onClick={handleLike}
