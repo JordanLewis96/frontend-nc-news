@@ -38,3 +38,13 @@ export const patchVotes = (article_id, inc_votes) => {
       return data;
     });
 };
+
+export const fetchComments = (article_id) => {
+  return axios
+    .get(
+      `https://backend-nc-news-jl.herokuapp.com/api/articles/${article_id}/comments`
+    )
+    .then(({ data }) => {
+      return data;
+    });
+};

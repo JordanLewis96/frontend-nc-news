@@ -21,19 +21,20 @@ export default function Votes({ article_id, votes }) {
   return (
     <>
       <h5 className="voteMessage">Did you like this article?</h5>
+      <h6 className="ArticleScore">Article Score: {votes + voteChanges}</h6>
       <button
         className="voteButtons"
         onClick={handleLike}
         disabled={voteChanges > 0}
       >
-        👍
+      👍
       </button>
       <button
         className="voteButtons"
         onClick={handleDislike}
         disabled={voteChanges < 0}
       >
-        👎
+      👎
       </button>
     </>
   );
