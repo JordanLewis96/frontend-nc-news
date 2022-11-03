@@ -35,8 +35,7 @@ export default function Articles() {
               <p className="articleTopic"> {article.topic}</p>
               <p className="articleAuthor"> Authored by - {article.author}</p>
               <p className="articleBody"> {" "}{article.body}</p>
-              <p className="articleVotes">Votes - {article.votes}</p>
-              <p className="articleCommentCount">Comments -{article.comment_count}</p>
+              <p className="articleVotes"> ArticleRating: 📰{article.votes}</p>
             </li>
           );
         })}

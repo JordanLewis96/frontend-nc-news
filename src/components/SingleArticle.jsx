@@ -33,7 +33,7 @@ export default function ArticleByID() {
               <p className="articleAuthor"> Authored by - {article.author}</p>
               <p className="articleBody"> {" "}{article.body}</p>
               <Votes className="articleVotes" article_id={article_id} votes={article.votes}></Votes>
-              <p className="articleCommentCount">Comments -{article.comment_count}</p>
+              <p><Link className="CommentsButton" to={`/articles/${article_id}/comments`}>Comments: ({article.comment_count})</Link></p>
             </li>
   )
 }

@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Articles from "./components/Articles"
 import ArticleByID from "./components/SingleArticle";
+import ListOfComments from "./components/CommentList";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Articles />}/>
           <Route path='/:topic' element={<Articles/>}></Route>
           <Route path="/articles/:article_id" element={<ArticleByID />}></Route>
+          <Route path="/articles/:article_id/comments" element={<ListOfComments />}></Route>
         </Routes>
     </div>
   );
